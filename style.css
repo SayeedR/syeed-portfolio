@@ -130,9 +130,8 @@ h2 {
   border: 1px solid #1e293b;
   padding: 25px;
   border-radius: 10px;
-  margin-bottom: 20px;
+  margin-bottom: 35px; /* increase gap */
   transition: 0.3s;
-  gap: 15px;
 }
 
 .card h3 {
