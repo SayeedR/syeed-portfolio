@@ -132,6 +132,7 @@ h2 {
   border-radius: 10px;
   margin-bottom: 20px;
   transition: 0.3s;
+  gap: 15px;
 }
 
 .card h3 {
