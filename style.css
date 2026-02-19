@@ -1,3 +1,4 @@
+/* BASE */
 * {
   margin: 0;
   padding: 0;
@@ -8,7 +9,7 @@
 
 body {
   background: #000;
-  color: #00ffcc;
+  color: #00ffc0; /* slightly brighter cyan */
   line-height: 1.6;
 }
 
@@ -20,7 +21,7 @@ body {
   padding: 20px 8%;
   position: fixed;
   width: 100%;
-  background: rgba(0,0,0,0.85);
+  background: rgba(0,0,0,0.9); /* more visible background */
   backdrop-filter: blur(6px);
   z-index: 1000;
   top: 0;
@@ -28,27 +29,27 @@ body {
 
 .logo {
   font-size: 1.5rem;
-  color: #00ffcc;
+  color: #00ffc0;
 }
 
 nav a {
   margin-left: 32px;
   text-decoration: none;
-  color: #00ffcc;
-  opacity: 0.8;
+  color: #00ffc0;
+  opacity: 0.9; /* make links more visible */
   transition: all 0.3s;
 }
 
 nav a:hover {
   opacity: 1;
-  text-shadow: 0 0 12px #00ffcc;
+  text-shadow: 0 0 12px #00ffc0;
 }
 
 .hamburger {
   display: none;
   font-size: 2.2rem;
   cursor: pointer;
-  color: #00ffcc;
+  color: #00ffc0;
 }
 
 /* HERO */
@@ -67,8 +68,8 @@ nav a:hover {
   position: absolute;
   inset: 0;
   background-image:
-    linear-gradient(rgba(0,255,204,0.08) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(0,255,204,0.08) 1px, transparent 1px);
+    linear-gradient(rgba(0,255,192,0.1) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0,255,192,0.1) 1px, transparent 1px);
   background-size: 50px 50px;
   z-index: 0;
   pointer-events: none;
@@ -81,231 +82,91 @@ nav a:hover {
   letter-spacing: -1px;
 }
 
-.glitch::before,
-.glitch::after {
-  content: attr(data-text);
-  position: absolute;
-  left: 0;
-  top: 0;
-}
+.glitch::before { color: #ff00c8; }
+.glitch::after { color: #00fff9; }
 
-.glitch::before {
-  color: #ff00c8;
-  animation: glitch-1 2.5s infinite;
-}
-
-.glitch::after {
-  color: #00fff9;
-  animation: glitch-2 3s infinite;
-}
-
-@keyframes glitch-1 {
-  0%, 100% { transform: translate(0); }
-  20% { transform: translate(-4px, 4px); }
-  40% { transform: translate(4px, -4px); }
-  60% { transform: translate(-4px, 0); }
-  80% { transform: translate(4px, 4px); }
-}
-
-@keyframes glitch-2 {
-  0%, 100% { transform: translate(0); }
-  30% { transform: translate(5px, -3px); }
-  50% { transform: translate(-5px, 3px); }
-  70% { transform: translate(3px, -5px); }
-}
-
+/* TYPING EFFECT */
 .typing {
   margin-top: 1.5rem;
   font-size: 1.5rem;
-  border-right: 3px solid #00ffcc;
+  border-right: 3px solid #00ffc0;
   white-space: nowrap;
   overflow: hidden;
   width: 0;
   animation: typing 4.5s steps(52) forwards, blink 1.2s infinite;
 }
 
-@keyframes typing {
-  to { width: 100%; }
-}
-
-@keyframes blink {
-  50% { border-color: transparent; }
-}
+@keyframes blink { 50% { border-color: transparent; } }
 
 /* SECTIONS */
-.section {
-  padding: 120px 8% 100px;
-  position: relative;
-}
-
 .section-title {
   font-size: 2.2rem;
   margin-bottom: 2.5rem;
-  color: #00ffcc;
+  color: #00ffc0;
 }
 
 /* CARDS / GRID */
-.grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 1.5rem;
-}
-
 .card {
   padding: 1.8rem;
-  border: 1px solid #00ffcc22;
-  transition: all 0.35s;
-  background: rgba(0,255,204,0.03);
+  border: 1px solid rgba(0,255,192,0.35); /* stronger border */
+  background: rgba(0,255,192,0.05);
 }
 
 .card:hover {
-  border-color: #00ffcc88;
-  box-shadow: 0 0 25px rgba(0,255,204,0.25);
-  transform: translateY(-6px);
+  border-color: #00ffc0;
+  box-shadow: 0 0 25px rgba(0,255,192,0.3);
 }
 
 /* TERMINAL BOX */
 .terminal-box {
-  border: 1px solid #00ffcc33;
-  padding: 2rem;
-  background: rgba(0,255,204,0.04);
-  max-width: 900px;
-  margin: 0 auto;
+  border: 1px solid rgba(0,255,192,0.4);
+  background: rgba(0,255,192,0.06);
 }
 
 /* BUTTONS */
-.hero-buttons {
-  margin-top: 3.5rem;
-  z-index: 1;
-}
-
-.btn {
-  padding: 0.9rem 2.2rem;
-  margin: 0 0.8rem;
-  text-decoration: none;
-  font-size: 1rem;
-  transition: all 0.3s;
-  border-radius: 4px;
-}
-
 .primary {
-  background: #00ffcc;
+  background: #00ffc0;
   color: #000;
 }
 
 .primary:hover {
-  box-shadow: 0 0 30px #00ffcc80;
-  transform: translateY(-3px);
+  box-shadow: 0 0 30px #00ffc0;
 }
 
 .outline {
-  border: 1px solid #00ffcc;
-  color: #00ffcc;
+  border: 1px solid #00ffc0;
+  color: #00ffc0;
 }
 
 .outline:hover {
-  background: #00ffcc;
+  background: #00ffc0;
   color: #000;
 }
 
 /* EXPERIENCE */
-.experience {
-  background: #0a0a0a;
-}
-
 .exp-item {
-  background: rgba(0,255,204,0.05);
-  border: 1px solid #00ffcc22;
-  border-radius: 8px;
-  margin-bottom: 1.4rem;
-  overflow: hidden;
-  transition: all 0.3s;
+  background: rgba(0,255,192,0.07);
+  border: 1px solid rgba(0,255,192,0.35);
 }
 
 .exp-item:hover {
-  border-color: #00ffcc66;
-  box-shadow: 0 0 20px rgba(0,255,204,0.15);
-}
-
-.exp-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1.4rem 2rem;
-  cursor: pointer;
-  background: rgba(0,255,204,0.04);
-}
-
-.exp-header h3 {
-  font-size: 1.35rem;
-}
-
-.toggle-btn {
-  background: none;
-  border: none;
-  color: #00ffcc;
-  font-size: 1.8rem;
-  cursor: pointer;
-}
-
-.exp-content {
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.45s ease, padding 0.4s ease;
-  padding: 0 2rem;
-  background: rgba(0,255,204,0.025);
-}
-
-.exp-content ul {
-  padding: 1.8rem 0;
-  list-style: none;
-}
-
-.exp-content li {
-  margin: 0.9rem 0;
-  position: relative;
-  padding-left: 1.6rem;
+  border-color: #00ffc0;
+  box-shadow: 0 0 20px rgba(0,255,192,0.25);
 }
 
 .exp-content li::before {
-  content: "→";
-  position: absolute;
-  left: 0;
-  color: #00ffcc;
+  color: #00ffc0;
 }
 
 /* FOOTER */
 .footer {
-  text-align: center;
-  padding: 2.5rem;
-  border-top: 1px solid #00ffcc22;
-  color: #00ffcc88;
-  font-size: 0.95rem;
+  border-top: 1px solid rgba(0,255,192,0.35);
+  color: #00ffc0cc;
 }
 
 /* RESPONSIVE */
 @media (max-width: 768px) {
-  .hamburger { display: block; }
-  nav {
-    display: none;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    width: 100%;
-    background: rgba(0,0,0,0.98);
-    padding: 1.5rem 0;
-    text-align: center;
-  }
-  nav.active { display: block; }
-  nav a {
-    display: block;
-    margin: 1.2rem 0;
-    font-size: 1.4rem;
-  }
-
   .glitch { font-size: 3.8rem; }
   .typing { font-size: 1.3rem; }
-
-  .section { padding: 100px 6% 80px; }
   .section-title { font-size: 1.9rem; }
 }
