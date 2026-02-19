@@ -1,9 +1,6 @@
-// Hamburger menu
-const hamburger = document.querySelector('.hamburger');
-const navMenu = document.querySelector('.navbar nav');
-
-hamburger.addEventListener('click', () => {
-  navMenu.classList.toggle('active');
+// Hamburger menu toggle
+document.querySelector('.hamburger').addEventListener('click', () => {
+  document.querySelector('nav').classList.toggle('active');
 });
 
 // Experience accordion
@@ -15,7 +12,7 @@ items.forEach(item => {
   const btn = item.querySelector(".toggle-btn");
 
   header.addEventListener("click", () => {
-    // Close other items
+    // Close others
     items.forEach(other => {
       if (other !== item) {
         other.querySelector(".exp-content").style.maxHeight = null;
