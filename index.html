@@ -1,144 +1,108 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Syeed Anwar | Penetration Tester & SQA</title>
-  <link rel="stylesheet" href="style.css" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Syeed Anwar | Cyber Security</title>
+<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
 </head>
 <body>
-  <!-- ===== HEADER / NAV ===== -->
-  <header class="header">
-    <div class="container">
-      <h1 class="logo">Syeed Anwar</h1>
-<nav class="nav">
-  <ul>
-    <li><a href="#about">About</a></li>
-    <li><a href="#skills">Skills</a></li>
-    <li><a href="#projects">Projects</a></li>
-    <li><a href="#contact">Contact</a></li>
-    <li>
-      <a href="https://drive.google.com/file/d/18zrRTav_kDT6n84hzWEDeUFXEKXuvviQ/view"
-         target="_blank"
-         class="cv-btn">
-         View CV
-      </a>
-    </li>
-  </ul>
-</nav>
 
-    </div>
-  </header>
+<!-- NAVBAR -->
+<header class="navbar">
+  <div class="logo">root@syeed:~$</div>
+  <nav>
+    <a href="#home">// home</a>
+    <a href="#about">// about</a>
+    <a href="#skills">// skills</a>
+    <a href="#projects">// projects</a>
+    <a href="#contact">// contact</a>
+  </nav>
+</header>
 
-  <!-- ===== HERO ===== -->
-  <section class="hero">
-    <div class="overlay"></div>
-    <h1><span class="glow">Syeed Anwar</span></h1>
-    <p class="subtitle">Penetration Tester & Software Quality Assurance Engineer</p>
-    <div class="hero-buttons">
-      <a href="#projects" class="btn primary">View My Work</a>
-      <a href="#contact" class="btn secondary">Contact Me</a>
-    </div>
-  </section>
+<!-- HERO -->
+<section id="home" class="hero">
+  <div class="grid-bg"></div>
 
-  <!-- ===== ABOUT ===== -->
-  <section id="about" class="about">
-    <h2>About Me</h2>
+  <h1 class="glitch" data-text="SYEED ANWAR">SYEED ANWAR</h1>
+
+  <p class="typing">
+    > Penetration Tester | Red Team | SQA Automation Engineer
+  </p>
+
+  <div class="hero-buttons">
+    <a href="#projects" class="btn primary">View Exploits</a>
+    <a href="https://drive.google.com/file/d/18zrRTav_kDT6n84hzWEDeUFXEKXuvviQ/view"
+       target="_blank"
+       class="btn outline">Download CV</a>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about" class="section">
+  <h2 class="section-title">> whoami</h2>
+  <div class="terminal-box">
     <p>
-      I’m a security-focused SQA engineer with 3+ years of experience in software testing, penetration testing, and vulnerability analysis.
-      I combine an attacker mindset with quality-driven testing to build secure and reliable applications.
+      I am a security-focused SQA Engineer with 3+ years of experience.
+      Specialized in penetration testing, Linux privilege escalation,
+      vulnerability assessment, and automation testing.
+      I combine attacker mindset with quality engineering to build secure systems.
     </p>
-  </section>
+  </div>
+</section>
 
-  <!-- ===== SKILLS ===== -->
-  <section id="skills" class="skills">
-    <h2>Core Skills</h2>
-    <div class="grid">
-      <div>Network & Web Penetration Testing</div>
-      <div>Vulnerability Assessment & Exploitation</div>
-      <div>Linux Privilege Escalation</div>
-      <div>OWASP Top 10</div>
-      <div>Manual & Automation Testing</div>
-      <div>API & Security Testing</div>
+<!-- SKILLS -->
+<section id="skills" class="section">
+  <h2 class="section-title">> skills</h2>
+  <div class="grid">
+    <div class="card">Network Penetration Testing</div>
+    <div class="card">Web App Security</div>
+    <div class="card">Linux Privilege Escalation</div>
+    <div class="card">OWASP Top 10</div>
+    <div class="card">Metasploit / Nmap</div>
+    <div class="card">Burp Suite</div>
+    <div class="card">Selenium Automation</div>
+    <div class="card">API Testing</div>
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects" class="section">
+  <h2 class="section-title">> exploits & labs</h2>
+  <div class="grid">
+
+    <div class="card project">
+      <h3>DistCC RCE</h3>
+      <p>Exploited misconfigured distccd service → privilege escalation → root access.</p>
     </div>
-  </section>
 
-  <!-- ===== PROJECTS ===== -->
-  <section id="projects" class="projects">
-    <h2>Projects</h2>
-    <div class="projects-grid">
-      <div class="card">
-        <h3>DistCC RCE (CVE-2004-2687)</h3>
-        <p>Exploited unauthenticated remote command execution, gained root access, and created a professional pentest report.</p>
-      </div>
-
-      <div class="card">
-        <h3>Web Application Security Testing</h3>
-        <p>Identified OWASP Top 10 vulnerabilities using Burp Suite and manual testing techniques.</p>
-      </div>
-
-      <div class="card">
-        <h3>SQA Automation & Security Testing</h3>
-        <p>Designed functional and security test cases, automated regression tests using Selenium & Postman.</p>
-      </div>
-
-      <div class="card">
-        <h3>Tryotel App and Web Testing</h3>
-        <p>Developed comprehensive test cases for web and Android applications, covering all features including flight booking and account management, and generated detailed test reports.</p>
-      </div>
-
-      <div class="card">
-        <h3>API Testing (Postman & Newman)</h3>
-        <p>Validated APIs for Tryotel, restfulbooker.herokuapp.com, and thetestingworldapi.com, executing collections to ensure functionality, performance, and security.</p>
-      </div>
-
-      <div class="card">
-        <h3>Project Management (ClickUp, Jira, TestRail)</h3>
-        <p>Managed testing for Tryotel web app, tracking defects and workflows across all modules.</p>
-      </div>
-
-      <div class="card">
-        <h3>Load Testing (JMeter)</h3>
-        <p>Conducted performance testing on BlazeDemo, simulating user loads to identify bottlenecks and optimize API responses.</p>
-      </div>
-
-      <div class="card">
-        <h3>Rokomari Automation (Java, Selenium, TestNG, Maven)</h3>
-        <p>Automated end-to-end testing for an e-commerce platform, validating user flows and integrations.</p>
-      </div>
-
-      <div class="card">
-        <h3>Amazon Automation (Python, Selenium, PyTest)</h3>
-        <p>Implemented parallel test execution with pytest-xdist, HTML reporting, and data-driven testing using openpyxl for e-commerce scenarios.</p>
-      </div>
+    <div class="card project">
+      <h3>Web App Pentest</h3>
+      <p>Identified OWASP vulnerabilities using manual testing & Burp Suite.</p>
     </div>
-  </section>
 
-  <!-- ===== TOOLS ===== -->
-  <section class="tools">
-    <h2>Tools</h2>
-    <p>Nmap, Burp Suite, Metasploit, Wireshark, Kali Linux, Selenium, Postman, Jira</p>
-  </section>
-
-  <!-- ===== CONTACT ===== -->
-  <section id="contact" class="contact">
-    <h2>Contact</h2>
-    <p>
-      📧 Email: <a href="mailto:anwarsayeedsqa@email.com">anwarsayeedsqa@email.com</a><br/>
-      🔗 LinkedIn: <a href="https://linkedin.com/in/syeed-anwar" target="_blank">linkedin.com/in/syeed-anwar</a><br/>
-      💻 GitHub: <a href="https://github.com/SayeedR" target="_blank">github.com/SayeedR</a>
-    </p>
-  </section>
-
-  <!-- ===== FOOTER ===== -->
-  <footer class="footer">
-    <div class="container">
-      <p>© 2026 Syeed Anwar | Designed & Secured with ❤️</p>
-      <div class="social-links">
-        <a href="https://linkedin.com/in/syeed-anwar" target="_blank">LinkedIn</a> |
-        <a href="https://github.com/SayeedR" target="_blank">GitHub</a>
-      </div>
+    <div class="card project">
+      <h3>API Security Testing</h3>
+      <p>Validated authentication, authorization, and input validation flaws.</p>
     </div>
-  </footer>
+
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="section">
+  <h2 class="section-title">> contact</h2>
+  <div class="terminal-box">
+    <p>Email: anwarsayeedsqa@email.com</p>
+    <p>LinkedIn: linkedin.com/in/syeed-anwar</p>
+    <p>GitHub: github.com/SayeedR</p>
+  </div>
+</section>
+
+<footer class="footer">
+  <p>© 2026 Syeed Anwar | Secured by Red Team Mindset</p>
+</footer>
+
 </body>
 </html>
