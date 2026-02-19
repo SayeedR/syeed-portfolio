@@ -1,4 +1,4 @@
-/* BASE */
+/* ===== BASE ===== */
 * {
   margin: 0;
   padding: 0;
@@ -14,7 +14,7 @@ body {
   overflow-x: hidden;
 }
 
-/* NAVBAR */
+/* ===== NAVBAR ===== */
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -61,7 +61,7 @@ nav a:hover {
   color: #00ffe5;
 }
 
-/* HERO */
+/* ===== HERO ===== */
 .hero {
   height: 100vh;
   display: flex;
@@ -85,7 +85,7 @@ nav a:hover {
   pointer-events: none;
 }
 
-/* GLITCH */
+/* ===== GLITCH ===== */
 .glitch {
   font-size: 6rem;
   position: relative;
@@ -133,7 +133,7 @@ nav a:hover {
   75% { transform: translate(1px, 1px); }
 }
 
-/* TYPING EFFECT */
+/* ===== TYPING EFFECT ===== */
 .typing {
   margin-top: 1.5rem;
   font-size: 1.7rem;
@@ -147,7 +147,7 @@ nav a:hover {
 @keyframes blink { 50% { border-color: transparent; } }
 @keyframes typing { to { width: 100%; } }
 
-/* HERO BUTTONS */
+/* ===== HERO BUTTONS ===== */
 .hero-buttons {
   margin-top: 2.5rem;
   display: flex;
@@ -184,7 +184,129 @@ nav a:hover {
   box-shadow: 0 0 30px #00ffe5aa, 0 0 50px #00ffff44 inset;
 }
 
-/* RESPONSIVE */
+/* ===== SECTION TITLES ===== */
+.section {
+  padding: 100px 8%;
+  position: relative;
+  z-index: 1;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  color: #00ffe5;
+  text-shadow: 0 0 15px #00ffe5, 0 0 25px #00ffff66;
+  margin-bottom: 2rem;
+}
+
+/* ===== TERMINAL BOX ===== */
+.terminal-box {
+  background: #00000022;
+  border: 2px solid #00ffe5;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 0 25px #00ffe5aa inset;
+  animation: glow 2s infinite alternate;
+}
+
+@keyframes glow {
+  0% { box-shadow: 0 0 25px #00ffe5aa inset; }
+  100% { box-shadow: 0 0 35px #00ffe5ff inset; }
+}
+
+/* ===== CARDS ===== */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+}
+
+.card {
+  background: #00000044;
+  border: 2px solid #00ffe5;
+  padding: 1.5rem;
+  border-radius: 10px;
+  text-align: center;
+  font-weight: 500;
+  box-shadow: 0 0 20px #00ffe5aa;
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 35px #00ffe5ff, 0 0 50px #00ffff44 inset;
+}
+
+/* ===== EXPERIENCE SECTION ===== */
+.experience .exp-item {
+  background: #00000044;
+  border: 2px solid #00ffe5;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 20px #00ffe5aa;
+}
+
+.exp-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 1.5rem;
+  cursor: pointer;
+  background: #00000033;
+}
+
+.exp-header h3 {
+  font-size: 1.2rem;
+  color: #00ffe5;
+}
+
+.exp-header span {
+  color: #00ffffaa;
+  font-size: 0.95rem;
+}
+
+.toggle-btn {
+  background: transparent;
+  border: 2px solid #00ffe5;
+  border-radius: 50%;
+  color: #00ffe5;
+  font-weight: bold;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.toggle-btn:hover {
+  background: #00ffe5;
+  color: #000;
+}
+
+.exp-content {
+  max-height: 0;
+  overflow: hidden;
+  padding: 0 1.5rem;
+  transition: max-height 0.4s ease;
+}
+
+.exp-content ul {
+  padding: 1rem 0;
+  list-style: disc;
+  margin-left: 1.5rem;
+}
+
+/* ===== FOOTER ===== */
+.footer {
+  padding: 2rem 8%;
+  text-align: center;
+  border-top: 1px solid #00ffe5aa;
+  color: #00ffe5aa;
+  font-size: 0.95rem;
+  margin-top: 3rem;
+}
+
+/* ===== RESPONSIVE ===== */
 @media (max-width:768px){
   .glitch { font-size: 4rem; }
   .typing { font-size: 1.3rem; }
