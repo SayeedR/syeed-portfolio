@@ -158,6 +158,26 @@
 <footer class="footer">
   <p>© 2026 Syeed Anwar | Secured by Red Team Mindset</p>
 </footer>
+  <script>
+  const items = document.querySelectorAll(".exp-item");
+
+  items.forEach(item => {
+    const header = item.querySelector(".exp-header");
+    const content = item.querySelector(".exp-content");
+    const btn = item.querySelector(".toggle-btn");
+
+    header.addEventListener("click", () => {
+      if (content.style.maxHeight) {
+        content.style.maxHeight = null;
+        btn.textContent = "+";
+      } else {
+        content.style.maxHeight = content.scrollHeight + "px";
+        btn.textContent = "−";
+      }
+    });
+  });
+</script>
+
 
 </body>
 </html>
